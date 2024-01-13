@@ -1,0 +1,22 @@
+meta {
+  name: getMoviesForTheater
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/api/theaters/movies/search?title=star
+  body: json
+  auth: none
+}
+
+query {
+  title: star
+}
+
+body:json {
+  {
+    "from_date": "2023-11-10",
+    "to_date": "2023-12-22"
+  }
+}

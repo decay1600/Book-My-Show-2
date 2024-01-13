@@ -1,0 +1,21 @@
+meta {
+  name: add-cities
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/api/cities
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer <token>
+}
+
+body:json {
+  {
+    "city_name": "New Mexico"
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: add-theaters
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/theaters
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer <token>
+}
+
+body:json {
+  {
+    "theater_name": "The Empire Strikes Back",
+    "city_id": 0,
+    "no_of_screens": 6
+  }
+}

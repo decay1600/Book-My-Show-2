@@ -1,0 +1,22 @@
+meta {
+  name: update-movies
+  type: http
+  seq: 3
+}
+
+patch {
+  url: http://localhost:3000/api/movies/112
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer <token>
+}
+
+body:json {
+  {
+    "movie_name": "XXX-Is Back",
+    "language": "English"
+  }
+}

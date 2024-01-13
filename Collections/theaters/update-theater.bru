@@ -1,0 +1,23 @@
+meta {
+  name: update-theater
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:3000/api/theaters/113
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer <token>
+}
+
+body:json {
+  {
+    "city_id": 0,
+    "theater_name": "Star Cinemazz",
+    "no_of_screens": 3
+  }
+}

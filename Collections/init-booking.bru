@@ -1,0 +1,23 @@
+meta {
+  name: init-booking
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/api/booking
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer <token>
+}
+
+body:json {
+  {
+    "show_time_id": 101,
+    "seat_no": "A001,A002", 
+    "no_of_tickets": 3
+  }
+}

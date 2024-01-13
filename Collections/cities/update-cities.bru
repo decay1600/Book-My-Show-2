@@ -1,0 +1,21 @@
+meta {
+  name: update-cities
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:3000/api/cities/114
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer <token>
+}
+
+body:json {
+  {
+    "city_name": "New York"
+  }
+}

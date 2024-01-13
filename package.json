@@ -1,0 +1,59 @@
+{
+  "name": "bookmyshow-case-study",
+  "version": "1.0.0",
+  "description": "A RESTful API for bookmyshow case study",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "npm run build && node build/server.js",
+    "test": "jest --detectOpenHandles",
+    "coverage": "jest --collect-coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "generate-models": "npx sequelize-auto -h localhost -d bookmyshow -u root -p 3306 -x Needle@67 -e mysql -o ./src/models -l ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vazanth"
+  },
+  "author": "Vasanth Kumar",
+  "license": "MIT",
+  "_moduleAliases": {
+    "@": "src"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.4.1",
+    "@fastify/helmet": "^11.1.1",
+    "@fastify/jwt": "^7.2.3",
+    "@fastify/redis": "^6.1.1",
+    "@fastify/static": "^6.2.0",
+    "argon2": "^0.31.2",
+    "dotenv": "^16.3.1",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "fastify": "^4.24.3",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "mysql2": "^3.6.3",
+    "node-schedule": "^2.1.1",
+    "stripe": "^14.5.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/module-alias": "^2.0.4",
+    "@types/node": "^20.9.0",
+    "@types/node-schedule": "^2.1.4",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

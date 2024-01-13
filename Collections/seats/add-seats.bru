@@ -1,0 +1,23 @@
+meta {
+  name: add-seats
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/seats/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer <token>
+}
+
+body:json {
+  {
+    "show_time_id": 117,
+    "seat_number": 1,
+    "row_letter": "D"
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: get-movie-info
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/api/movies/100/info
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "from_date": "2023-11-10",
+    "to_date": "2023-12-20"
+  }
+}
